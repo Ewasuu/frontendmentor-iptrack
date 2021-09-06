@@ -6,6 +6,15 @@ const reg = new RegExp(/([a-zA-Z]+)\.([a-zA-Z])+$/)
 let mymap = L.map('mapid')
 let ipFinded, param
 
+
+let icon = L.icon({
+        iconUrl : 'images/icon-location.svg',
+    
+        iconSize:     [40, 50], 
+        iconAnchor:   [22, 94],   
+        popupAnchor:  [-3, -76]
+    })
+
 const searcher = async (ipsearch = '')=>{
     reg.test(ipsearch)? param = 'domain=' : param = 'ipAddress='
 
@@ -14,14 +23,6 @@ const searcher = async (ipsearch = '')=>{
     document.querySelector('.location').textContent = ipFinded.location.city
     document.querySelector('.timezone').textContent = `UTC${ipFinded.location.timezone}`
     document.querySelector('.isp').textContent = ipFinded.isp
-
-    let icon = L.icon({
-        iconUrl : '../images/icon-location.svg',
-    
-        iconSize:     [40, 50], 
-        iconAnchor:   [22, 94],   
-        popupAnchor:  [-3, -76]
-    })
     
     mymap.setView([ipFinded.location.lat, ipFinded.location.lng], 13);
     
