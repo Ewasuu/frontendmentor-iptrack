@@ -8,7 +8,7 @@ let ipFinded, param
 
 
 let icon = L.icon({
-        iconUrl : 'https://github.com/Ewasuu/frontendmentor-iptracker/blob/main/images/icon-location.svg',
+        iconUrl : 'https://raw.githubusercontent.com/Ewasuu/frontendmentor-iptrack/1d514f1987d19c4b5fd1c2f123f9e19b4e3c85f1/images/icon-location.svg',
     
         iconSize:     [40, 50], 
         iconAnchor:   [22, 94],   
