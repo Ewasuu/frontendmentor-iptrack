@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+
+    --Very-Dark-Gray: hsl(0, 0%, 17%);
+    --Dark-Gray: hsl(0, 0%, 59%);
+}
+
+#mapid { 
+    height: 60vh; 
+    position: relative;
+}
+#mapid img{
+    margin-top: -1rem;
+}
+.main__header{
+    height: 40vh;
+    background-image: url('../images/pattern-bg.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header__title{
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 2rem auto;
+}
+.header__form{
+    position: relative;
+
+}
+.header__input {
+    padding: .65rem .5rem;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    padding-right: 3rem;
+}
+.header__btn{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 0px;
+    background-color: hsl(0, 0%, 0%);
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 2rem;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.header__label img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.data {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    z-index: 10000;
+    top: 150px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 80%;
+    border-radius: 20px;
+    padding: 1rem;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.104);
+}
+.ip__item{
+    padding: .6rem;
+}
+.ip__description {
+    color: var(--Dark-Gray);
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    font-weight: 500;
+}
+.data .ip__item p{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--Very-Dark-Gray);
+}
+@media screen and (min-width: 1000px){
+    .header__input{
+        width: 25rem;
+    }
+    .data{
+        flex-direction: unset;
+        top: 30vh;
+    }
+    .data .ip__item p,
+    .ip__description{
+        text-align: start;
+    }
+    .ip__item{
+        position: relative;
+        margin: auto 1rem;
+
+    }
+    .ip__item::after {
+        content: '';
+        border: 1px solid transparent;
+        border-right-color: var(--Dark-Gray);
+        height: 3rem;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .ip__item:last-child::after{
+        border-right: transparent;
+    }
+    #mapid img{
+        margin-top: -55px ;  
+    }
+}
+@media screen and (min-width: 1100px) {
+    :root{
+        font-size: 19px;
+    }
+}
+@media screen and (min-width: 1350px) {
+    :root{
+        font-size: 22px;
+    }
+}
